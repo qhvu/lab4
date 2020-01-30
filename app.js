@@ -38,13 +38,13 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/hello/:userName', hello.view);
+//app.get('/hello/:userName', hello.view);
 // Example route
 // app.get('/users', user.list);
 
-app.get('/project',project.viewProject);
+app.get('/project/:name',project.viewProject);
 
-project.viewProject();
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
